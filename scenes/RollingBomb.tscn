@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://deiclmgrldvr5"]
+
+[ext_resource type="Script" uid="uid://cdpdmy14smx2k" path="res://scripts/rolling_bomb.gd" id="1_6lye1"]
+[ext_resource type="Texture2D" uid="uid://fr0m2qukwnka" path="res://assets/projectiles/RollingBomb/RollingBomb2.png" id="1_oe5sa"]
+[ext_resource type="Texture2D" uid="uid://bd20654m0g3ru" path="res://assets/projectiles/RollingBomb/RollingBomb3.png" id="2_6lye1"]
+[ext_resource type="Texture2D" uid="uid://ddgh0718uttyt" path="res://assets/projectiles/RollingBomb/RollingBomb4.png" id="3_qy7wr"]
+[ext_resource type="Texture2D" uid="uid://52dwscdvvea4" path="res://assets/projectiles/RollingBomb/RollingBomb5.png" id="4_ekyq5"]
+[ext_resource type="Texture2D" uid="uid://defqca8k5weju" path="res://assets/projectiles/RollingBomb/RollingBomb6.png" id="5_pgjah"]
+[ext_resource type="Texture2D" uid="uid://c2e5rq4jbcfnl" path="res://assets/projectiles/RollingBomb/RollingBomb7.png" id="6_yh5al"]
+[ext_resource type="Texture2D" uid="uid://bvd46t6kw4bas" path="res://assets/projectiles/RollingBomb/RollingBomb8.png" id="7_c8r82"]
+[ext_resource type="Texture2D" uid="uid://bmet7ufqk8mni" path="res://assets/projectiles/RollingBomb/RollingBomb9.png" id="8_qtv34"]
+[ext_resource type="Texture2D" uid="uid://btgpnrf0ttxx7" path="res://assets/projectiles/RollingBomb/RollingBomb10.png" id="9_654o4"]
+[ext_resource type="Texture2D" uid="uid://o72ykleq8axe" path="res://assets/projectiles/RollingBomb/RollingBomb11.png" id="10_jxxde"]
+[ext_resource type="Texture2D" uid="uid://inypgu0sxioc" path="res://assets/projectiles/RollingBomb/RollingBomb12.png" id="11_btgs5"]
+[ext_resource type="Texture2D" uid="uid://kgr5k58xktb8" path="res://assets/projectiles/RollingBomb/RollingBomb13.png" id="12_vjy6t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kd2m4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oe5sa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6lye1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qy7wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ekyq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pgjah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yh5al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c8r82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qtv34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_654o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jxxde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_btgs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vjy6t")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oe5sa"]
+radius = 20.09975
+
+[node name="RollingBomb" type="Area2D" unique_id=791966720]
+script = ExtResource("1_6lye1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=403421917]
+scale = Vector2(0.23454545, 0.25119048)
+sprite_frames = SubResource("SpriteFrames_kd2m4")
+animation = &"roll"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2082387223]
+position = Vector2(-10, 8)
+shape = SubResource("CircleShape2D_oe5sa")

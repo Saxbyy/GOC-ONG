@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://ceadudtngpol7"]
+
+[ext_resource type="Script" uid="uid://mlc2sgvgg8h1" path="res://scripts/skull.gd" id="1_axhxn"]
+[ext_resource type="Texture2D" uid="uid://dfp27x77feg8a" path="res://assets/projectiles/Skull/SkulLargel1.png" id="2_tvo7m"]
+[ext_resource type="Texture2D" uid="uid://bb6xs0qn2ugvh" path="res://assets/projectiles/Skull/SkullUI1.png" id="2_x0vhb"]
+[ext_resource type="Texture2D" uid="uid://uv720gu2vgip" path="res://assets/projectiles/Skull/SkullUI2.png" id="3_fjm1a"]
+[ext_resource type="Texture2D" uid="uid://dbvgi8dsbue53" path="res://assets/projectiles/Skull/SkulLargel2.png" id="3_ydqi4"]
+[ext_resource type="Texture2D" uid="uid://bpp0jcewha5s0" path="res://assets/projectiles/Skull/SkulLargel3.png" id="4_bgdrj"]
+[ext_resource type="Texture2D" uid="uid://7mfi8fjwju28" path="res://assets/projectiles/Skull/SkullUI3.png" id="4_dgd7y"]
+[ext_resource type="Texture2D" uid="uid://chwdcbojy0drm" path="res://assets/projectiles/Skull/SkullUI4.png" id="5_62ioy"]
+[ext_resource type="Texture2D" uid="uid://5aiqqnx3mbdn" path="res://assets/projectiles/Skull/SkulLargel4.png" id="5_j4l31"]
+[ext_resource type="Texture2D" uid="uid://bsutnq1aun4kd" path="res://assets/projectiles/Skull/SkulLargel5.png" id="6_6ewqw"]
+[ext_resource type="Texture2D" uid="uid://bgi6yyrl4ru1y" path="res://assets/projectiles/Skull/SkullUI5.png" id="6_j4446"]
+[ext_resource type="Texture2D" uid="uid://cc4e7jhnppmci" path="res://assets/projectiles/Skull/SkullUI6.png" id="7_3mcs6"]
+[ext_resource type="Texture2D" uid="uid://cnsm8nsdfmm6k" path="res://assets/projectiles/Skull/SkulLargel6.png" id="7_5pxk4"]
+[ext_resource type="Texture2D" uid="uid://gkgqfxiq4dkk" path="res://assets/projectiles/Skull/SkulLargel7.png" id="8_2ee71"]
+[ext_resource type="Texture2D" uid="uid://cttt1jb5djdkv" path="res://assets/projectiles/Skull/SkullUI7.png" id="8_tvo7m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ydqi4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tvo7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ydqi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bgdrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j4l31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6ewqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5pxk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ee71")
+}],
+"loop": false,
+"name": &"disappear",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x0vhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fjm1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dgd7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_62ioy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j4446")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3mcs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tvo7m")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bgdrj"]
+radius = 16.0
+
+[node name="Skull" type="Area2D" unique_id=969900172]
+script = ExtResource("1_axhxn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=901291558]
+scale = Vector2(0.13807417, 0.13296096)
+sprite_frames = SubResource("SpriteFrames_ydqi4")
+animation = &"roll"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1186223221]
+position = Vector2(-2, -1)
+shape = SubResource("CircleShape2D_bgdrj")

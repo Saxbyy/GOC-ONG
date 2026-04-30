@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b5mo08i527p8s"]
+
+[ext_resource type="Script" uid="uid://b3inerbr845sy" path="res://scripts/game_over.gd" id="1_qae0b"]
+[ext_resource type="Texture2D" uid="uid://fle88s36b516" path="res://assets/background/BACKGROUND IMG.png" id="2_qae0b"]
+[ext_resource type="Texture2D" uid="uid://b68rragxvtdk" path="res://assets/ui/PC _ Computer - Undertale - Miscellaneous - Game Over.png" id="2_vuicl"]
+
+[node name="GameOver" type="Control" unique_id=3829881]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qae0b")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=430259076]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1621.0
+offset_bottom = 868.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qae0b")
+stretch_mode = 6
+
+[node name="GameOverImage" type="TextureRect" parent="." unique_id=624099189]
+layout_mode = 1
+offset_left = 313.0
+offset_top = 147.0
+offset_right = 1357.0
+offset_bottom = 555.0
+texture = ExtResource("2_vuicl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=839554320]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=642696307]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = 127.0
+offset_right = 188.0
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=379643475]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Your Score: 0"
+horizontal_alignment = 1
+
+[node name="RetryButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=825411631]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "RESTART"

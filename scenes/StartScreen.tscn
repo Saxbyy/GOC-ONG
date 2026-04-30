@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://trbaxdfbsyuh"]
+
+[ext_resource type="Texture2D" uid="uid://fle88s36b516" path="res://assets/background/BACKGROUND IMG.png" id="1_4vrcr"]
+[ext_resource type="Script" uid="uid://1jrywvtqou2r" path="res://scripts/start_screen.gd" id="1_a0vbq"]
+[ext_resource type="Texture2D" uid="uid://b50b1gxjfn78g" path="res://assets/ui/LOGO.png" id="2_pswtb"]
+
+[node name="StartScreen" type="Control" unique_id=1411643737]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_a0vbq")
+
+[node name="Background" type="TextureRect" parent="." unique_id=923330735]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1620.0
+offset_bottom = 866.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4vrcr")
+stretch_mode = 6
+
+[node name="GameTitle" type="TextureRect" parent="." unique_id=1639213856]
+layout_mode = 0
+offset_left = 143.0
+offset_top = -23.0
+offset_right = 1535.0
+offset_bottom = 745.0
+texture = ExtResource("2_pswtb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1937504593]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=420464596]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -108.5
+offset_top = -237.0
+offset_right = 108.5
+offset_bottom = -133.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1708355556]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "START"
