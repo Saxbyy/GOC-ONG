@@ -22,4 +22,8 @@ func explode():
 
 func _on_body_entered(body):
 	if body.name == "Player":
+		var hit_sound = AudioStreamPlayer.new()
+		hit_sound.stream = load("res://assets/sfx/YOUR_HIT_SOUND.mp3")
+		get_tree().root.add_child(hit_sound)
+		hit_sound.play()
 		get_tree().call_deferred("change_scene_to_file", "res://scenes/GameOver.tscn")

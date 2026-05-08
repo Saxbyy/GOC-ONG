@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://o72ykleq8axe" path="res://assets/projectiles/RollingBomb/RollingBomb11.png" id="10_jxxde"]
 [ext_resource type="Texture2D" uid="uid://inypgu0sxioc" path="res://assets/projectiles/RollingBomb/RollingBomb12.png" id="11_btgs5"]
 [ext_resource type="Texture2D" uid="uid://kgr5k58xktb8" path="res://assets/projectiles/RollingBomb/RollingBomb13.png" id="12_vjy6t"]
+[ext_resource type="AudioStream" uid="uid://0aye3xmiyxk0" path="res://assets/sfx/minecraft-creeper-fuse.mp3" id="14_qy7wr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kd2m4"]
 animations = [{
@@ -72,3 +73,6 @@ animation = &"roll"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2082387223]
 position = Vector2(-10, 8)
 shape = SubResource("CircleShape2D_oe5sa")
+
+[node name="SpawnSound" type="AudioStreamPlayer2D" parent="." unique_id=21917754]
+stream = ExtResource("14_qy7wr")

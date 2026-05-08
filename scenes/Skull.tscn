@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cnsm8nsdfmm6k" path="res://assets/projectiles/Skull/SkulLargel6.png" id="7_5pxk4"]
 [ext_resource type="Texture2D" uid="uid://gkgqfxiq4dkk" path="res://assets/projectiles/Skull/SkulLargel7.png" id="8_2ee71"]
 [ext_resource type="Texture2D" uid="uid://cttt1jb5djdkv" path="res://assets/projectiles/Skull/SkullUI7.png" id="8_tvo7m"]
+[ext_resource type="AudioStream" uid="uid://cng6ktxl5th32" path="res://assets/sfx/plants-vs-zombies-groan.mp3" id="16_ydqi4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydqi4"]
 animations = [{
@@ -85,3 +86,6 @@ animation = &"roll"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1186223221]
 position = Vector2(-2, -1)
 shape = SubResource("CircleShape2D_bgdrj")
+
+[node name="SpawnSound" type="AudioStreamPlayer2D" parent="." unique_id=186459454]
+stream = ExtResource("16_ydqi4")

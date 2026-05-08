@@ -127,15 +127,15 @@ stream = ExtResource("11_wp0k4")
 [node name="Countdown" type="CanvasLayer" parent="." unique_id=1317426557]
 
 [node name="CountdownImage" type="TextureRect" parent="Countdown" unique_id=1149702439]
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.503
-offset_left = 157.5
-offset_top = -156.0
-offset_right = 197.5
-offset_bottom = -118.71802
+anchor_bottom = 0.5
+offset_left = -979.5
+offset_top = -603.0
+offset_right = -939.5
+offset_bottom = -563.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch_mode = 4

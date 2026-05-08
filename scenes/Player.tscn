@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://2vorlyvqa878" path="res://assets/background/run/run_left.png" id="6_lkdrv"]
 [ext_resource type="Texture2D" uid="uid://wafsvjv8871k" path="res://assets/background/run/run_right.png" id="7_p7iby"]
 [ext_resource type="Texture2D" uid="uid://cskkyebl0faiw" path="res://assets/background/run/run_up.png" id="8_0rnld"]
+[ext_resource type="AudioStream" uid="uid://lxeiiox1tg16" path="res://assets/sfx/YOUR_HIT_SOUND.mp3" id="10_6eyey"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bruh7"]
 atlas = ExtResource("1_khinc")
@@ -514,8 +515,11 @@ script = ExtResource("1_bruh7")
 position = Vector2(-2, -2.0000038)
 scale = Vector2(3.1054685, 3.5749998)
 sprite_frames = SubResource("SpriteFrames_srp4u")
-animation = &"idle_up"
+animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=428396436 groups=["player"]]
 position = Vector2(-2, 19)
 shape = SubResource("CapsuleShape2D_khinc")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=2068843852]
+stream = ExtResource("10_6eyey")

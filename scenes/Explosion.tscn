@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://b8o3i5heoxqh5" path="res://assets/projectiles/Explosion/Explosion16.png" id="16_dgu1x"]
 [ext_resource type="Texture2D" uid="uid://6swsflvc2kkc" path="res://assets/projectiles/Explosion/Explosion17.png" id="17_rjag3"]
 [ext_resource type="Texture2D" uid="uid://2dmgwfiw7aa2" path="res://assets/projectiles/Explosion/Explosion18.png" id="18_djm5v"]
+[ext_resource type="AudioStream" uid="uid://d2cf5y18yjvkh" path="res://assets/sfx/minecraft-tnt-explosion.mp3" id="19_48nd6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i4n8h"]
 animations = [{
@@ -86,3 +87,6 @@ position = Vector2(0, -84.99999)
 scale = Vector2(0.8749902, 0.95682245)
 sprite_frames = SubResource("SpriteFrames_i4n8h")
 animation = &"explode"
+
+[node name="ExplosionSound" type="AudioStreamPlayer2D" parent="." unique_id=415645394]
+stream = ExtResource("19_48nd6")

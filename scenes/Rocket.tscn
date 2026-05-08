@@ -61,6 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://cgxxs8w65dgy" path="res://assets/projectiles/RocketBlue/1_7.png" id="59_5g6vb"]
 [ext_resource type="Texture2D" uid="uid://dyf4hjj57oali" path="res://assets/projectiles/RocketBlue/1_8.png" id="60_kgqjj"]
 [ext_resource type="Texture2D" uid="uid://58xw2lxxk33r" path="res://assets/projectiles/RocketBlue/1_9.png" id="61_740u6"]
+[ext_resource type="AudioStream" uid="uid://bp1yygiqsq43c" path="res://assets/sfx/minecraft-firework.mp3" id="62_mo7n5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ijy23"]
 animations = [{
@@ -264,3 +265,6 @@ animation = &"rocket blue"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=560432370]
 position = Vector2(-15.75, -3)
 shape = SubResource("RectangleShape2D_x1we0")
+
+[node name="SpawnSound" type="AudioStreamPlayer2D" parent="." unique_id=699631910]
+stream = ExtResource("62_mo7n5")
